@@ -9,7 +9,7 @@
 	--white: #ffffff;
 	--dark-bg: #2f303a;
 	--grey-text-color: #757575;
-	--team-section-bg: #f5f4fa;
+	--light-grey-bg: #f5f4fa;
 	--client-icon: #afb1b8;
 	--hover-btn: #188ce8;
 	/* animation var */
@@ -41,6 +41,7 @@ body {
 	color: var(--hover-link-color);
 }
 .btn {
+	display: block;
 	cursor: pointer;
 	background-color: var(--hover-link-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -73,7 +74,6 @@ body {
 	display: flex;
 	max-width: 206px;
 }
-.peculiarities-list-item:not(:first-child),
 .activity-item:not(:first-child),
 .team-item:not(:first-child),
 .client-item:not(:first-child) {
@@ -177,7 +177,7 @@ body {
 /* -------------------- */
 /* Main section styles */
 /* -------------------- */
-/* Order section */
+/* Hero section */
 .hero-section {
 	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg.webp);
 	background-repeat: no-repeat;
@@ -188,7 +188,7 @@ body {
 	max-width: 1600px;
 	margin: 0 auto;
 }
-.hero-title {
+.hero-section__title {
 	width: 696px;
 	font-weight: 900;
 	font-size: 44px;
@@ -199,45 +199,39 @@ body {
 	color: var(--white);
 	margin: 0 auto;
 }
-.modal-btn {
-	display: block;
+.hero-section__btn {
 	padding: 10px 32px;
 	margin: 30px auto 0;
 }
 /* Peculiarities section */
-.peculiarities-section {
+.peculiarities {
 	padding-bottom: 0;
 }
-.peculiarities-list {
+.peculiarities__list {
 	display: flex;
+	gap: 30px;
 }
-.peculiarities-list-item {
-	max-width: 270px;
+.peculiarities__item {
+	flex-basis: 270px;
+	padding-bottom: 3px;
 }
-.peculiarities-icon-conteiner {
-	display: flex;
+.peculiarities__icon-wrap {
 	padding: 25px 100px;
-	background: #f5f4fa;
+	background: var(--light-grey-bg);
 	border-radius: 4px;
 }
-.peculiarities-icon {
-	display: block;
-}
-.peculiarities-title {
+.peculiarities__title {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.15;
-	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	margin-top: 30px;
 }
-.peculiarities-text {
+.peculiarities__text {
 	font-size: 14px;
 	line-height: 1.71;
-	letter-spacing: 0.03em;
 	color: var(--grey-text-color);
 	margin-top: 10px;
-	min-height: 75px;
 }
 /* activity section */
 .activity-list {
@@ -274,7 +268,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: var(--team-section-bg);
+	background: var(--light-grey-bg);
 	min-width: 100%;
 }
 .team-list {
@@ -369,7 +363,7 @@ body {
 	margin-left: 8px;
 }
 .filter-btn {
-	background-color: #f5f4fa;
+	background-color: var(--light-grey-bg);
 	border: none;
 	outline: none;
 	border-radius: 4px;
@@ -712,7 +706,6 @@ body {
 	color: var(--hover-link-color);
 }
 .modal-form-btn {
-	display: block;
 	margin: 30px auto 0;
 	padding: 10px 55px 10px 56px;
 }
